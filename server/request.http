@@ -1,0 +1,49 @@
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"taikhoan",
+    "password":"1234"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json 
+
+{
+    "username":"taikhoan",
+    "password":"1234"
+}
+
+###
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkwMTkwZjNlZmUxZDJiYzA3YzJmNzQiLCJpYXQiOjE2MjA0ODU2MDl9.l0LcKgDg5mwYsSEd1w2Ba394RCC-SqELwnvebKyPXsY
+
+{
+    "title":"Toán",
+    "description":"Toán nâng cao",
+    "url":"google.com",
+    "status":"Leaning"
+}
+
+###
+GET http://localhost:5000/api/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg1NzRkZGNkZmEwODE0NDRhNDFmNDEiLCJpYXQiOjE2MTkzNjUyMzJ9.psOBNFKoLlm75_DO9rA6oJKDOF01kMqUNyEEKlucocE
+
+
+###
+PUT http://localhost:5000/api/post/60858aa17ba01c201020b28a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg1NzRkZGNkZmEwODE0NDRhNDFmNDEiLCJpYXQiOjE2MTkzNjI4OTV9.tGEcRKVKdraX3I59QNY-EXqR8hjG9xSfcYdpwJF_QZI
+
+{
+    "title":"dang upadate",
+    "description":"hello",
+    "url":"google.com",
+    "status":"Learning"
+}
+
+###
+DELETE http://localhost:5000/api/post/60858d04911743165c66c421
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg1NzRkZGNkZmEwODE0NDRhNDFmNDEiLCJpYXQiOjE2MTkzNjUyMzJ9.psOBNFKoLlm75_DO9rA6oJKDOF01kMqUNyEEKlucocE
